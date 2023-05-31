@@ -3,7 +3,10 @@ apiVersion: v1
 kind: Pod
 metadata:
    name: nginx-demo
+   namespace: demo
 spec:
+   nodeSelector: #if you want your pod run on node with lable gpu=true
+     gpu: "true"
    containers:
    - image: nginx:latest
      name: nginx-demo
