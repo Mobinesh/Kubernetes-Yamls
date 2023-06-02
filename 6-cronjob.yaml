@@ -4,6 +4,7 @@ metadata:
 name: batch-job
 spec:
   schedule: "0,15,30,45 * * * *" #This job runs every 15 minuets every hour every day(minuets,hour,day-of-month,month,day-of-week
+  startingDeadlineSeconds: 15 # The job most start atleast 15seconds after scheduling time
   jobTemplate:
     spec:
       template:
