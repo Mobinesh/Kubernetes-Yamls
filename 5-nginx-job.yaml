@@ -3,6 +3,8 @@ kind: Job
 metadata:
   name: batch-job
 spec:
+  completions: 5 #This pod ensures 5 pods finish job successfuly
+  parallelism: 2 #Two Pods can run parallel
   template:
     metadata:
       labels:
